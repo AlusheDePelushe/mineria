@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Curso de Minería de Datos - Proceso de Aprendizaje</title>
+  
+   <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h3 {
+            color: #2980b9;
+        }
+        .section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .two-columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .column {
+            flex: 1;
+            min-width: 300px;
+        }
+        .concept-card {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 5px 5px 0;
+        }
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .results-grid .result-card:nth-child(4) {
+        grid-column: 1 / -1; /* Esto hará que ocupe desde la primera hasta la última columna */
+        /* Alternativa si quieres que ocupe solo 2 columnas: */
+        /* grid-column: span 2; */
+        }
+
+        .result-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+        }
+        .dashboard {
+            background-color: #e8f4fc;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .dashboard img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .technique {
+            background-color: #f0f7fd;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #5dade2;
+        }
+        .highlight {
+            background-color: #fffde7;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Producto integrador. Proyecto final de minería de datos</h1>
+        <p>Proceso de aprendizaje y aplicación práctica</p>
+        <p></p>
+    </header>
+
+    <div class="two-columns">
+        <div class="column">
+            <div class="section">
+                <h2>Base Teórica</h2>
+                
+                <div class="concept-card">
+                    <h3>Sociedad de la información y Sociedad del conocimiento</h3>
+                    <p>En la actualidad, la información y el conocimiento son los recursos más valiosos, superando incluso a materiales tradicionales como el petróleo. La globalización y la tecnología han facilitado el acceso masivo a datos, cambiando la manera en que las personas trabajan, estudian y viven. La innovación y competitividad están directamente relacionadas con el manejo y aplicación efectiva del conocimiento.</p>
+                </div>
+                
+                <div class="concept-card">
+                    <h3>Inteligencia de negocios (BI)</h3>
+                    <p>Proceso de análisis de datos que combina herramientas y técnicas como analítica empresarial, minería de datos, visualización de datos e infraestructura tecnológica para ofrecer información procesable. Su objetivo principal es mejorar las decisiones empresariales para aumentar ingresos, optimizar eficiencia operativa y obtener ventajas competitivas.</p>
+                </div>
+                
+                <div class="concept-card">
+                    <h3>OLAP (Online Analytical Processing)</h3>
+                    <p>Tecnología de análisis de datos que permite explorar, consultar y analizar grandes volúmenes de datos desde múltiples perspectivas de manera rápida y eficiente. Características principales:</p>
+                    <ul>
+                        <li>Análisis multidimensional</li>
+                        <li>Interactividad</li>
+                        <li>Rapidez y eficiencia</li>
+                        <li>Consolidación y agregación</li>
+                        <li>Visualización de datos</li>
+                    </ul>
+                </div>
+                
+                <div class="concept-card">
+                    <h3>Minería de datos</h3>
+                    <p>Disciplina que permite encontrar patrones, anomalías y relaciones significativas dentro de grandes conjuntos de datos. Combina tres áreas científicas clave:</p>
+                    <ul>
+                        <li>Estadística: Analiza relaciones numéricas entre datos</li>
+                        <li>Inteligencia Artificial: Introduce capacidad de imitar procesos de pensamiento humano</li>
+                        <li>Machine Learning: Emplea algoritmos que "aprenden" de los datos</li>
+                    </ul>
+                    <p>Proceso típico incluye: recolección y preparación de datos, selección de atributos relevantes, aplicación de algoritmos, e interpretación y visualización de resultados.</p>
+                </div>
+                
+                <div class="concept-card">
+                    <h3>Proceso KDD (Knowledge Discovery in Databases)</h3>
+                    <p>Procedimiento iterativo e interactivo para extraer información útil y comprensible de grandes volúmenes de datos. Etapas:</p>
+                    <ol>
+                        <li><strong>Integración y Recopilación de Datos:</strong> Determinar fuentes relevantes y recopilar datos de distintos orígenes.</li>
+                        <li><strong>Selección, Limpieza y Transformación:</strong> Corregir errores, manejar valores faltantes, seleccionar variables relevantes.</li>
+                        <li><strong>Minería de Datos:</strong> Aplicar algoritmos para extraer patrones útiles.</li>
+                        <li><strong>Evaluación e Interpretación:</strong> Validar patrones descubiertos y su utilidad.</li>
+                        <li><strong>Difusión y Uso:</strong> Compartir conocimiento descubierto para toma de decisiones.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        
+        <div class="column">
+            <div class="section">
+                <h2>Base Teórica (Continuación)</h2>
+                
+                <div class="concept-card">
+                    <h3>Tareas y técnicas de minería de datos</h3>
+                    <div class="technique">
+                        <h4>Clasificación y Predicción</h4>
+                        <p><strong>Técnicas:</strong> Árboles de Decisión, Regresión Lineal, Redes Neuronales, K-vecinos más próximos, Naive Bayes, Máquinas de Vectores Soporte (SVM)</p>
+                    </div>
+                    <div class="technique">
+                        <h4>Categorización</h4>
+                        <p><strong>Técnicas:</strong> Agrupamiento (Clustering) como K-Means</p>
+                    </div>
+                    <div class="technique">
+                        <h4>Selección</h4>
+                        <p><strong>Técnicas:</strong> Reglas de Asociación, Análisis de Correlaciones, Programación Lógica Inductiva (ILP)</p>
+                    </div>
+                    <div class="technique">
+                        <h4>Otras</h4>
+                        <p><strong>Técnicas:</strong> Algoritmos Genéticos, Inducción de Reglas</p>
+                    </div>
+                </div>
+                
+                <div class="concept-card">
+                    <h3>Herramientas ETL, MOLAP, Data Warehouse, DataMarts</h3>
+                    <p><strong>ETL (Extracción, Transformación y Carga):</strong> Proceso fundamental para preparar datos. Ejemplos de herramientas: Informatica PowerCenter, Talend, Microsoft SSIS, Pentaho Data Integration.</p>
+                    <p><strong>MOLAP (Multidimensional OLAP):</strong> Organiza datos en estructuras multidimensionales (cubos OLAP) para análisis rápido. Ejemplo: Microsoft Analysis Services.</p>
+                    <p><strong>Data Warehouse:</strong> Repositorio centralizado de datos históricos integrados para análisis. Ejemplos: Snowflake, Amazon Redshift, Google BigQuery.</p>
+                    <p><strong>DataMarts:</strong> Subconjuntos de un Data Warehouse orientados a áreas específicas. Ejemplo: departamental (ventas, finanzas).</p>
+                </div>
+                
+                <div class="concept-card">
+                    <h3>Vista minable</h3>
+                    <p>Subconjunto de datos preparado y optimizado para el proceso de minería de datos. Características:</p>
+                    <ul>
+                        <li>Datos limpios y transformados</li>
+                        <li>Atributos relevantes seleccionados</li>
+                        <li>Estructura adecuada para análisis</li>
+                        <li>Puede incluir agregaciones o derivaciones</li>
+                    </ul>
+                    <p>Ejemplo creado en el curso: Vista para analizar incidentes y logs por empresa y servidor, que permite identificar patrones como frecuencia de incidentes, tiempo promedio de resolución, cantidad de logs y su severidad.</p>
+                </div>
+                
+                <div class="concept-card">
+                    <h3>Herramientas de minería de datos</h3>
+                    <p>En el curso se trabajó con <strong>KNIME</strong>, una plataforma open source para análisis de datos que permite:</p>
+                    <ul>
+                        <li>Cargar y transformar datos</li>
+                        <li>Aplicar algoritmos de minería de datos</li>
+                        <li>Visualizar resultados</li>
+                        <li>Automatizar flujos de trabajo</li>
+                    </ul>
+                    <p>Otras herramientas populares en el mercado: RapidMiner, Weka, Python (scikit-learn), R, SAS Enterprise Miner.</p>
+                </div>
+                
+                <div class="concept-card">
+                    <h3>Técnicas de minería de datos</h3>
+                    <p>En el curso se aplicó específicamente:</p>
+                    <p><strong>K-Means Clustering:</strong> Método de agrupamiento que divide un conjunto de datos en k grupos donde los puntos en el mismo cluster son más similares entre sí que con puntos en otros clusters. Es un algoritmo de aprendizaje no supervisado.</p>
+                    <p>Se utilizó para agrupar servidores basándose en cantidad y tipo de incidentes (bajos, medios y altos), permitiendo identificar patrones de comportamiento.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Resultados del Aprendizaje</h2>
+        
+        <div class="results-grid">
+            <div class="result-card">
+                <h3>Almacén de datos para generar vistas minables</h3>
+                <p>Se diseñó un almacén de datos enfocado en la gestión y análisis de incidentes en bases de datos empresariales, con las siguientes entidades:</p>
+                <ul>
+                    <li>Incidentes (tipo, severidad, descripción, fechas)</li>
+                    <li>Usuarios (nombre, rol, departamento)</li>
+                    <li>Servidores (nombre, tipo, ubicación, estado)</li>
+                    <li>Empresas (nombre, sector, país)</li>
+                    <li>Logs de Sistema (mensaje, severidad, fecha)</li>
+                </ul>
+            </div>
+            
+            <div class="result-card">
+                <h3>Herramientas utilizadas en el análisis</h3>
+                <p><strong>KNIME:</strong> Para el procesamiento y análisis de datos:</p>
+                <ul>
+                    <li>Carga y transformación de datos</li>
+                    <li>Aplicación de fórmulas matemáticas</li>
+                    <li>Generación de estadísticas (máximo, mínimo, promedio)</li>
+                    <li>Implementación de K-Means Clustering</li>
+                    <li>Visualización de resultados</li>
+                </ul>
+            </div>
+            
+            <div class="result-card">
+                <h3>Técnicas aplicadas</h3>
+                <p><strong>K-Means Clustering:</strong></p>
+                <ul>
+                    <li>Normalización previa de variables</li>
+                    <li>Configuración de 3 clusters</li>
+                    <li>Análisis basado en incidentes bajos, medios y altos</li>
+                    <li>Visualización mediante scatter plot</li>
+                </ul>
+                <p>Resultados permitieron agrupar servidores según patrones de incidentes para priorizar recursos y gestión proactiva.</p>
+            </div>
+            
+            <div class="result-card">
+                <h3>Vista minable implementada</h3>
+                <p>Consulta SQL que integra datos para análisis:</p>
+                <pre>
+SELECT 
+    e.nombre_empresa, 
+    e.pais, 
+    s.nombre_servidor, 
+    s.estado as estado_servidor,
+    COUNT(i.id) as total_incidentes,
+    AVG(i.tiempo_resolucion) as tiempo_promedio_resolucion,
+    SUM(CASE WHEN i.severidad = 'bajo' THEN 1 ELSE 0 END) as incidentes_bajos,
+    SUM(CASE WHEN i.severidad = 'medio' THEN 1 ELSE 0 END) as incidentes_medios,
+    SUM(CASE WHEN i.severidad = 'alto' THEN 1 ELSE 0 END) as incidentes_altos,
+    COUNT(l.id) as total_logs,
+    SUM(CASE WHEN l.nivel_severidad = 'critico' THEN 1 ELSE 0 END) as logs_criticos
+FROM empresas e
+JOIN servidores s ON e.id = s.id_empresa
+LEFT JOIN incidentes i ON s.id = i.id_servidor
+LEFT JOIN logs_sistema l ON s.id = l.id_servidor
+GROUP BY e.nombre_empresa, e.pais, s.nombre_servidor, s.estado
+ORDER BY total_incidentes DESC;
+                </pre>
+            </div>
+        </div>
+        
+        <div class="dashboard">
+            <h3>Panel Gerencial (Dashboard) derivado del análisis</h3>
+            <p>El análisis permitió generar insights valiosos para la toma de decisiones:</p>
+            
+            <h4>1. Análisis Predictivo de Fallos y Optimización de Mantenimiento</h4>
+            <p>Identificación de servidores con mayor cantidad de incidentes críticos para priorizar mantenimiento.</p>
+            <img src="./media/01.jpg" alt="Gráfico de servidores con más incidentes">
+            
+            <h4>2. Evaluación de Desempeño y Toma de Decisiones Estratégicas</h4>
+            <p>Análisis del tiempo promedio de resolución por departamento/empresa para identificar áreas de mejora.</p>
+            <img src="./media/02.jpg" alt="Gráfico de tiempos de resolución">
+            
+            <h4>3. Detección de Patrones Geográficos</h4>
+            <p>Análisis de incidentes por ubicación para fortalecer infraestructura en áreas problemáticas.</p>
+            <img src="./media/03.jpg" alt="Mapa de incidentes por ubicación">
+            
+            <h4>4. Clustering de Servidores</h4>
+            <p>Agrupamiento de servidores según patrones de incidentes para gestión proactiva.</p>
+            <img src="./media/04.jpg" alt="Visualización de clusters de servidores">
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Conclusiones</h2>
+        <p>El curso permitió comprender el ciclo completo de la minería de datos, desde la teoría fundamental hasta la aplicación práctica:</p>
+        <ul>
+            <li>La <strong>Inteligencia de Negocios</strong> y el <strong>OLAP</strong> son herramientas esenciales para transformar datos en información accionable.</li>
+            <li>El proceso <strong>KDD</strong> proporciona un marco metodológico robusto para el descubrimiento de conocimiento en bases de datos.</li>
+            <li>La creación de un <strong>almacén de datos</strong> bien diseñado y las <strong>vistas minables</strong> adecuadas son cruciales para análisis efectivos.</li>
+            <li>Herramientas como <strong>KNIME</strong> democratizan el acceso a técnicas avanzadas de análisis de datos.</li>
+            <li>Técnicas como el <strong>K-Means Clustering</strong> permiten descubrir patrones ocultos en los datos sin necesidad de supervisión.</li>
+            <li>La visualización efectiva de resultados es clave para comunicar hallazgos y apoyar la toma de decisiones.</li>
+        </ul>
+        <p>Este conocimiento es aplicable no solo en contextos empresariales, sino también en áreas como investigación científica, salud pública, y gestión gubernamental, demostrando el valor transversal de la minería de datos en la sociedad actual.</p>
+    </div>
+</body>
+</html>
